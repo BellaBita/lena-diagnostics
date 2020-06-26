@@ -1,3 +1,8 @@
 FROM _base_image_
 
-COPY _war_file_ /usr/local/lena/servers/appServer/webapps/
+
+RUN mkdir /apps
+
+COPY diagnostics.war /usr/local/lena/servers/appServer/webapps/
+COPY diagnostics.war /apps/
+
